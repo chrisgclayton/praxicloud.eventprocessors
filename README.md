@@ -9,7 +9,7 @@ Install-Package PraxiCloud-EventProcessors
 
 
 
-# Key Vault
+# Partition Management
 
 
 
@@ -21,7 +21,7 @@ Install-Package PraxiCloud-EventProcessors
 
 ## Sample Usage
 
-### Add Providers to the Metric Factory
+### Create Manager and Check Ownership
 
 ```csharp
 var manager = new FixedPartitionManager(logger, connectionString, 0);
