@@ -102,8 +102,11 @@ namespace praxicloud.eventprocessors
                 var runtimeInformation = await client.GetRuntimeInformationAsync().ConfigureAwait(false);
                 var partitions = runtimeInformation.PartitionIds.OrderBy(item => item).ToArray();
 
-                _indexManager = new StringIndexManager(managerQuantity, _managerId, partitions);
-                _indexManager.NotificationHandler = ManagerIndexUpdatedAsync;
+                _indexManager = new StringIndexManager(managerQuantity, _managerId, partitions)
+                {
+                    NotificationHandler = ManagerIndexUpdatedAsync
+                };
+
                 await _indexManager.InitializeAsync(CancellationToken.None);
             }
         }

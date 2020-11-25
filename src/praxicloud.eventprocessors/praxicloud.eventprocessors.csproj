@@ -6,7 +6,7 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>PraxiCloud-EventProcessors</PackageId>
-    <Description>PraxiCloud libraries offer a range of common functions, features and base classes to use when building solutions, increasing the time to delivery.</Description>
+    <Description>PraxiCloud libraries offer a range of common functions, features and base classes to use when building solutions, increasing the time to delivery. This package delivers common components for the event processor packages, including the legacy lease manager.</Description>
     <PackageTags>praxicloud utilities event processor host lease blob checkpoint epoch</PackageTags>
     <PackageReleaseNotes>Initial release</PackageReleaseNotes>
     <AssemblyVersion>1.0.11.0</AssemblyVersion>
@@ -17,12 +17,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>..\..\Documents\praxicloud.eventprocessors\praxicloud.eventprocessors.xml</DocumentationFile>
+    <DocumentationFile>..\..\documents\praxicloud.eventprocessors\praxicloud.eventprocessors.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.EventHubs" Version="4.3.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.10" />
     <PackageReference Include="PraxiCloud-Core" Version="2.2.0" />
     <PackageReference Include="PraxiCloud-Distributed" Version="2.3.0" />
   </ItemGroup>
